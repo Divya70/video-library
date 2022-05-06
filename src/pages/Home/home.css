@@ -1,0 +1,42 @@
+
+ .home-image-cont {
+ 
+      width: 100%;
+      height: 37.7rem;
+  }
+  .home-image-cont img {
+    width: 100%;
+   height: 100%;
+    
+  }
+  
+  .brand-container{
+      position: relative;
+  }
+  
+  .navbar-cont .link{
+      text-decoration: none;
+      color: var(--secondary-color);
+  }
+  .name-of-site{
+      position: absolute;
+      top: 0.2rem;
+      left: 2rem;
+      color: var(--secondary-color);
+      font-size: 1.2rem;
+      font-family: 'Poppins', sans-serif;
+  }
+  .explore-button-cont button{
+      position: absolute;
+      bottom: 10rem;
+      right: 16rem;
+      border: none;
+      padding: 0.8rem;
+      width: 7.5rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      border-radius: 2rem;
+  }
+
+ 
