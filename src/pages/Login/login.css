@@ -1,0 +1,62 @@
+
+.Login-page-container{
+      margin: auto;
+      height: 25rem;
+      margin-top: 5rem;
+      width: 25rem;
+      border-radius: 0.2rem;
+      background-color:wheat;
+      padding: 1rem;
+      box-shadow: 2px 2px 79px -44px var(--box-shadow-black-color);
+}
+.login-heading{
+      text-align: center;
+}
+.login-cont{
+      display: flex;
+      flex-direction: column;
+     
+}
+.login-cont input{
+      padding: 0.5rem;
+      margin: 1rem;
+      border-radius: 2rem;
+      border: none;
+}
+
+.options {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 5px;
+}
+
+.remember-me label {
+      color: var(--black-color);
+      font-weight: 600;
+
+}
+
+.forgot-password .forgot-pass {
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: 600;
+}
+.submit-button-cont button{
+      padding: 0.5rem;
+      font-size: 1rem;
+      width: 100%;
+      border: none;
+}
+.new-account-cont{
+      margin: 1rem;
+     display: flex;
+     justify-content: space-around;
+}
+.signup-button button{
+      padding:0.5rem;
+      border: none;
+      color: var(--primary-color);
+      font-size: 1rem;
+      font-weight: 600;
+}
