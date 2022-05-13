@@ -1,0 +1,13 @@
+.sidebar{
+      width: 20%;
+      padding: 1rem;
+      font-size: 1rem;
+      color:var(--secondary-color);
+     
+ }
+ .sidebar .sidebar-content{
+       padding: 1rem;
+ }
+ .sidebar-icon{
+      margin-right: 1.5rem;
+}

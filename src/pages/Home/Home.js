@@ -8,11 +8,9 @@ const Home = () => {
       <div className="home-image-cont">
         <img src="./images/homeimage.avif" alt="home-image" />
       </div>
-      <div className="name-of-site">
-        <h1>Jolly Library</h1>
-      </div>
+
       <Navbar />
-      <Link to="/gellery" className="explore-button-cont">
+      <Link to="/videolisting" className="explore-button-cont">
         <button>Explore</button>
       </Link>
     </div>

@@ -2,11 +2,11 @@
  .home-image-cont {
  
       width: 100%;
-      height: 37.7rem;
+      height: 35rem;
   }
   .home-image-cont img {
     width: 100%;
-   height: 100%;
+   height: fit-content;
     
   }
   
@@ -17,14 +17,6 @@
   .navbar-cont .link{
       text-decoration: none;
       color: var(--secondary-color);
-  }
-  .name-of-site{
-      position: absolute;
-      top: 0.2rem;
-      left: 2rem;
-      color: var(--secondary-color);
-      font-size: 1.2rem;
-      font-family: 'Poppins', sans-serif;
   }
   .explore-button-cont button{
       position: absolute;

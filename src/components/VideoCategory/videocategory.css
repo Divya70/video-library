@@ -1,0 +1,17 @@
+.fruit-category-container{
+      display: flex;
+      margin: 2rem 0 0 2rem;
+}
+ .fruit-category-container button{
+       padding: 0.3rem;
+       margin: 1rem;
+       border: none;
+       border-radius: 2rem;
+       width: 5rem;
+       color: var(--secondary-color);
+       background-color: var(--time-duration-color);
+ }
+ .fruit-category-container button:hover{
+      background-color: var(--primary-color);
+ }
+ 
