@@ -10,4 +10,7 @@
 :root{
  --primary-color:#125B50;
  --secondary-color: #F5F5F5;
+ --black-color:#000000;
+ --time-duration-color:#8f8b8b;
+ --card-des-color:#808080;
 }

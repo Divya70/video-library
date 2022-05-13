@@ -6,8 +6,20 @@ const Login = () => {
     <div className="Login-page-container">
       <h1 className="login-heading">Login</h1>
       <div className="login-cont">
-        <input type="text" placeholder="Enter Your Email" />
-        <input type="password" placeholder="Enter Your Password" />
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="Enter Your Email"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter Your Password"
+          required
+        />
       </div>
       <div className="options">
         <div className="remember-me">
@@ -22,7 +34,11 @@ const Login = () => {
       </div>
       <div className="submit-button-cont">
         <button className="submit-button">Submit</button>
+        <button className="login-guest-credential">
+          Login as guest credential
+        </button>
       </div>
+
       <div>
         <div className="new-account-cont">
           Create an Account

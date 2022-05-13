@@ -5,7 +5,7 @@
       margin-top: 5rem;
       width: 25rem;
       border-radius: 0.2rem;
-      background-color:wheat;
+      background-color:var(--primary-color) ;
       padding: 1rem;
       box-shadow: 2px 2px 79px -44px var(--box-shadow-black-color);
 }
@@ -39,7 +39,7 @@
 
 .forgot-password .forgot-pass {
       text-decoration: none;
-      color: var(--primary-color);
+      color: var(--black-color);
       font-weight: 600;
 }
 .submit-button-cont button{
@@ -59,4 +59,7 @@
       color: var(--primary-color);
       font-size: 1rem;
       font-weight: 600;
+}
+.login-guest-credential {
+      margin-top: 1rem;
 }
