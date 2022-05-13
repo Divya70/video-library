@@ -1,0 +1,10 @@
+.navbar-cont{
+      position:absolute;
+       display: flex;
+       gap: 3rem;
+       top: 2rem;
+       right: 6rem;
+       font-weight: 600;
+   }
+
+ 
