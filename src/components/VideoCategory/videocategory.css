@@ -1,6 +1,6 @@
 .fruit-category-container{
       display: flex;
-      margin: 2rem 0 0 2rem;
+      margin-left: 2rem;
 }
  .fruit-category-container button{
        padding: 0.3rem;

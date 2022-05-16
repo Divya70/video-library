@@ -5,6 +5,13 @@ const VideoContext = createContext([]);
 const VideoProvider = ({ children }) => {
   const [state, dispatch] = useReducer(videoReduce, {
     initialVideo: [],
+    categoryName: {
+      all: null,
+      fashion: null,
+      study: null,
+      music: null,
+      comedy: null,
+    },
   });
   return (
     <VideoContext.Provider value={{ state, dispatch }}>
