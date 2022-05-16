@@ -3,11 +3,15 @@
       padding: 1rem;
       font-size: 1rem;
       color:var(--secondary-color);
-     
+      box-shadow: 2px 2px 79px -44px var(--box-shadow-black-color);     
  }
  .sidebar .sidebar-content{
        padding: 1rem;
  }
  .sidebar-icon{
       margin-right: 1.5rem;
+}
+.sidebar-item-link{
+      text-decoration: none;
+      color: var(--secondary-color);
 }

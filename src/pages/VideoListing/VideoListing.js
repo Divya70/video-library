@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import VideosCom from "../../components/VideosCom/VideosCom";
 import VideoCategory from "../../components/VideoCategory/VideoCategory";
+import { getFilterVideos } from "../../utils/filterVideoCategory";
 import "./videolisting.css";
 function VideoListing() {
   const { state, dispatch } = useVideo();
@@ -17,6 +18,9 @@ function VideoListing() {
     getVideoData();
   }, []);
 
+  const categoriesData = getFilterVideos(state, initialVideo);
+
+  console.log(categoriesData);
   return (
     <>
       <Navbar />
@@ -24,7 +28,7 @@ function VideoListing() {
         <Sidebar />
         <div className="video-products-container">
           <VideoCategory />
-          {initialVideo.map((val) => {
+          {categoriesData.map((val) => {
             return <VideosCom key={val._id} val={val} />;
           })}
         </div>
