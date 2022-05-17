@@ -25,7 +25,7 @@ const Sidebar = () => {
 
         <div className="sidebar-content">
           <Link to="/watchlater" className="sidebar-item-link">
-            <i className="fa-regular fa-clock sidebar-icon"></i>Watch Later
+            <i className="fa-regular fa-bookmark sidebar-icon"></i> Watch Later
           </Link>
         </div>
 
