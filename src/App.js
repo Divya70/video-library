@@ -6,6 +6,7 @@ import Signup from "./pages/Signup/Signup";
 import VideoListing from "./pages/VideoListing/VideoListing";
 import { Liked } from "./pages/Liked/Liked";
 import Mockman from "mockman-js";
+import { SingleVideoPage } from "./pages/SingleVideoPage/SingleVideoPage";
 function App() {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/videolisting" element={<VideoListing />} />
         <Route path="/liked" element={<Liked />} />
+        <Route path="/singlevideopage/:videoId" element={<SingleVideoPage />} />
         <Route path="/mock" element={<Mockman />} />
       </Routes>
     </div>
