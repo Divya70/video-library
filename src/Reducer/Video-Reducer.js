@@ -65,6 +65,56 @@ const videoReduce = (state, action) => {
           comedy: true,
         },
       };
+    case "GET_HISTORY":
+      return {
+        ...state,
+        historyVideo: action.payload,
+      };
+    case "POST_HISTORY":
+      return {
+        ...state,
+        historyVideo: action.payload,
+      };
+    case "DELETE_HISTORY":
+      return {
+        ...state,
+        historyVideo: action.payload,
+      };
+    case "CLEAR_ALL_HISTORY":
+      return {
+        ...state,
+        historyVideo: [],
+      };
+    case "GET_LIKED_VIDEO":
+      return {
+        ...state,
+        likedVideo: action.payload,
+      };
+    case "POST_LIKED_VIDEO":
+      return {
+        ...state,
+        likedVideo: action.payload,
+      };
+    case "DELETE_LIKED_VIDEO":
+      return {
+        ...state,
+        likedVideo: action.payload,
+      };
+    case "GET_WATCHLATER_VIDEO":
+      return {
+        ...state,
+        watchLaterVideo: action.payload,
+      };
+    case "POST_WATCHLATER_VIDEO":
+      return {
+        ...state,
+        watchLaterVideo: action.payload,
+      };
+    case "DELETE_WATCHLATER_VIDEO":
+      return {
+        ...state,
+        watchLaterVideo: action.payload,
+      };
     default:
       state;
   }

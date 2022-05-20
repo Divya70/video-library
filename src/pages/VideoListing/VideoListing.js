@@ -19,8 +19,6 @@ function VideoListing() {
   }, []);
 
   const categoriesData = getFilterVideos(state, initialVideo);
-
-  console.log(categoriesData);
   return (
     <>
       <Navbar />

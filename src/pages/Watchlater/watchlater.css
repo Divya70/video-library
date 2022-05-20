@@ -1,0 +1,36 @@
+.liked-card-brand-cont{
+      display: flex;
+      width: 100%;
+      height: 100vh;
+}
+.liked-card-container{
+      width:80%;
+      display: flex;
+      flex-direction: column;
+}
+.liked-video-cont{
+      margin-top: 2rem;
+      width: 25rem;
+      margin-left: 2rem;
+      display: flex;
+      height: 10rem;
+      background-color: var(--secondary-color);
+      box-shadow: 1px -2px 5px 0px #000000bf;
+      
+}
+.liked-image-cont img{
+      width: 70%;
+      height: 100%;
+}
+.liked-video-title{
+      font-size: 1rem;
+}
+.des{
+      font-size: 0.8rem;
+}
+.fa-trash{
+     display: flex;
+     align-items: flex-end;
+     justify-content: flex-end;
+     margin: 8.5rem 1rem ;
+}

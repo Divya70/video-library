@@ -12,6 +12,14 @@ const authReduce = (authState, authAction) => {
         token: authAction.token,
         user: authAction.user,
       };
+    case "LOG_OUT":
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      return {
+        ...authState,
+        user: null,
+        token: null,
+      };
     default:
       authState;
   }

@@ -1,5 +1,4 @@
 const getFilterVideos = (categoryName, videos) => {
-  console.log(categoryName);
   const { fashion, study, music, comedy, all } = categoryName.categoryName;
   if (fashion) {
     const fashionVideo = videos.filter((video) => video.category === "fashion");

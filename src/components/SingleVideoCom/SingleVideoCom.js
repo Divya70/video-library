@@ -4,8 +4,44 @@ import "./singlevideocom.css";
 import Navbar from "../Navbar/Navbar";
 import Sidebar from "../Sidebar/Sidebar";
 import { useParams } from "react-router-dom";
+import { postHistoryHandler } from "../../services/PostHistory";
+import { postLikedVideoHandler } from "../../services/PostLikedVideoService";
+import { postWatchedVideoHandler } from "../../services/PostWatchedVideoService";
+import { useState } from "react";
+import { getSingleVideoPage } from "../../services/SingleVideoService";
+import { useVideo } from "../../Context/Video-Context";
+import { useEffect } from "react";
+import { useAuth } from "../../Context/Auth-Context";
+import { deleteLikedVideoHandler } from "../../services/DeleteLikedService";
+import { deleteWatchedVideoHandler } from "../../services/DeleteWatchedVideoService";
 const SingleVideoCom = () => {
+  const { state, dispatch } = useVideo();
+  const [getsingleVideo, setGetSingleVideo] = useState();
   const { videoId } = useParams();
+  const { initialVideo } = state;
+  const { likedVideo } = state;
+  const { watchLaterVideo } = state;
+  const {
+    authState: { token },
+  } = useAuth();
+
+  const callPostHistoryHandler = () => {
+    postHistoryHandler(getsingleVideo, dispatch, token);
+  };
+  const callPostLikedVideoHandler = () => {
+    postLikedVideoHandler(getsingleVideo, dispatch, token);
+  };
+  const callPostWatchedVideoHandler = () => {
+    postWatchedVideoHandler(getsingleVideo, dispatch, token);
+  };
+  const callDeleteLikedService = () => {
+    deleteLikedVideoHandler(getsingleVideo._id, dispatch, token);
+  };
+  const callDeleteWatchedService = () => {
+    deleteWatchedVideoHandler(getsingleVideo._id, dispatch, token);
+  };
+  useEffect(() => getSingleVideoPage(videoId, setGetSingleVideo), []);
+
   return (
     <>
       <div>
@@ -20,20 +56,49 @@ const SingleVideoCom = () => {
                 height="100%"
                 url={`https://www.youtube.com/watch?v=${videoId}`}
                 playing={false}
-                muted={true}
+                muted={false}
                 controls={true}
+                onStart={() => callPostHistoryHandler()}
               />
             </div>
-            <div className="card-title">Titile should be here</div>
+            <div className="card-title">Title</div>
             <div className="card-description">
               <div className="views">112M views</div>
               <div className="like-and-watchlater-cont">
-                <div className="likes">
-                  <i className="fa-regular fa-thumbs-up"></i> Likes
-                </div>
-                <div className="watch-later">
-                  <i className="fa-regular fa-bookmark"></i> Watch Later
-                </div>
+                {likedVideo.find((item) => item._id === videoId) ? (
+                  <div
+                    className="likes"
+                    onClick={() => callDeleteLikedService()}
+                  >
+                    <i className="fa-solid fa-thumbs-up"></i> Liked
+                  </div>
+                ) : (
+                  <div
+                    className="likes"
+                    onClick={() => callPostLikedVideoHandler()}
+                  >
+                    <i className="fa-regular fa-thumbs-up"></i> Like
+                  </div>
+                )}
+                {watchLaterVideo.find(
+                  (itemWatched) => itemWatched._id === videoId
+                ) ? (
+                  <div
+                    className="watch-later"
+                    onClick={() => callDeleteWatchedService()}
+                  >
+                    <i className="fa-solid fa-bookmark"></i> Saved for Watch
+                    Later
+                  </div>
+                ) : (
+                  <div
+                    className="watch-later"
+                    onClick={() => callPostWatchedVideoHandler()}
+                  >
+                    <i className="fa-regular fa-bookmark"></i> Watch Later
+                  </div>
+                )}
+
                 <div className="save-to-playlist">
                   <i className="fa-solid fa-list-check"></i> Save
                 </div>

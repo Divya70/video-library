@@ -12,6 +12,9 @@ const VideoProvider = ({ children }) => {
       music: null,
       comedy: null,
     },
+    historyVideo: [],
+    likedVideo: [],
+    watchLaterVideo: [],
   });
   return (
     <VideoContext.Provider value={{ state, dispatch }}>

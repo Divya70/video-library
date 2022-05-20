@@ -14,4 +14,8 @@
  --time-duration-color:#8f8b8b;
  --card-des-color:#808080;
  --card-bg-color:#f5f5dc;
+ --red-color:#ff0000;
 }
+/* iframe {
+  pointer-events: none;
+} */
