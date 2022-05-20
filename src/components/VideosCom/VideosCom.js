@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./videoscom.css";
-import { useParams } from "react-router-dom";
 function VideosCom({
   val: {
     imgScr,

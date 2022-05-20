@@ -4,8 +4,8 @@ import { authReduce } from "../Reducer/Auth-Reducer";
 const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const [authState, authDispatch] = useReducer(authReduce, {
-    token: "",
-    user: "",
+    token: localStorage.getItem("token") || "",
+    user: JSON.parse(localStorage.getItem("user")) || "",
   });
   return (
     <AuthContext.Provider value={{ authState, authDispatch }}>

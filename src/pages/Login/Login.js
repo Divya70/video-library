@@ -4,6 +4,7 @@ import "./login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../Context/Auth-Context";
 import { useState } from "react";
+import Navbar from "../../components/Navbar/Navbar";
 const Login = () => {
   const { authDispatch } = useAuth();
   const navigateVideoListing = useNavigate();
@@ -52,60 +53,63 @@ const Login = () => {
   };
 
   return (
-    <div className="Login-page-container">
-      <h1 className="login-heading">Login</h1>
-      <div className="login-cont">
-        <input
-          type="text"
-          name="email"
-          id="email"
-          value={loginData.email}
-          placeholder="Enter Your Email"
-          onChange={getLoginData}
-          required
-        />
-        <input
-          type="password"
-          name="password"
-          id="password"
-          value={loginData.password}
-          placeholder="Enter Your Password"
-          onChange={getLoginData}
-          required
-        />
-      </div>
-      <div className="options">
-        <div className="remember-me">
-          <input id="remember-me" type="checkbox" />
-          <label htmlFor="remember-me">Remember me</label>
+    <>
+      <Navbar />
+      <div className="Login-page-container">
+        <h1 className="login-heading">Login</h1>
+        <div className="login-cont">
+          <input
+            type="text"
+            name="email"
+            id="email"
+            value={loginData.email}
+            placeholder="Enter Your Email"
+            onChange={getLoginData}
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            value={loginData.password}
+            placeholder="Enter Your Password"
+            onChange={getLoginData}
+            required
+          />
         </div>
-        <div className="forgot-password">
-          <Link to="/forgot" className="forgot-pass">
-            Forgot Password?
-          </Link>
+        <div className="options">
+          <div className="remember-me">
+            <input id="remember-me" type="checkbox" />
+            <label htmlFor="remember-me">Remember me</label>
+          </div>
+          <div className="forgot-password">
+            <Link to="/forgot" className="forgot-pass">
+              Forgot Password?
+            </Link>
+          </div>
         </div>
-      </div>
-      <div className="submit-button-cont">
-        <button className="submit-button" onClick={loginHandler}>
-          Submit
-        </button>
-        <button
-          className="login-guest-credential"
-          onClick={guestCredentialHandler}
-        >
-          Login as guest credential
-        </button>
-      </div>
+        <div className="submit-button-cont">
+          <button className="submit-button" onClick={loginHandler}>
+            Submit
+          </button>
+          <button
+            className="login-guest-credential"
+            onClick={guestCredentialHandler}
+          >
+            Login as guest credential
+          </button>
+        </div>
 
-      <div>
-        <div className="new-account-cont">
-          Create an Account
-          <Link to="/signup" className="signup-button">
-            <button>Signup</button>
-          </Link>
+        <div>
+          <div className="new-account-cont">
+            Create an Account
+            <Link to="/signup" className="signup-button">
+              <button>Signup</button>
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

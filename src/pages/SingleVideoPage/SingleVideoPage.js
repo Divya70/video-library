@@ -1,14 +1,16 @@
-import { React, useEffect } from "react";
-import axios from "axios";
+import { React } from "react";
 import "./singlevideopage.css";
 import { SingleVideoCom } from "../../components/SingleVideoCom/SingleVideoCom";
-import { useVideo } from "../../Context/Video-Context";
+import { useAuth } from "../../Context/Auth-Context";
 const SingleVideoPage = () => {
-  const { state } = useVideo();
-  const { singleVideo } = state;
+  const { authState } = useAuth();
   return (
     <>
-      <SingleVideoCom />
+      {authState.token === null ? (
+        alert("You are not logged in")
+      ) : (
+        <SingleVideoCom />
+      )}
     </>
   );
 };
