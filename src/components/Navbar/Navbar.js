@@ -21,7 +21,7 @@ const Navbar = () => {
           <Link to="/" className="link">
             Home
           </Link>
-          {authState.token === null ? (
+          {!authState.token ? (
             <Link to="/login" className="link">
               Login
             </Link>
