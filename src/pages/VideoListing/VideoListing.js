@@ -1,12 +1,12 @@
 import { React, useEffect } from "react";
 import axios from "axios";
+import "./videolisting.css";
 import { useVideo } from "../../Context/Video-Context";
 import Navbar from "../../components/Navbar/Navbar";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import VideosCom from "../../components/VideosCom/VideosCom";
 import VideoCategory from "../../components/VideoCategory/VideoCategory";
 import { getFilterVideos } from "../../utils/filterVideoCategory";
-import "./videolisting.css";
 function VideoListing() {
   const { state, dispatch } = useVideo();
   const { initialVideo } = state;

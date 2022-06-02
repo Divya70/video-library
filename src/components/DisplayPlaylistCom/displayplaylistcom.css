@@ -1,0 +1,19 @@
+.display-playlist-brand-cont{
+      width: 80%;
+      display: flex;
+     
+      
+}
+.displayl-playlist-main{
+      margin-left: 8rem;
+     width: 70%;
+      height: 3rem;
+      display: flex;
+      border-radius: 1rem;
+      color: var(--secondary-color);
+      background-color: #6e7270;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      margin-top: 1rem;
+}

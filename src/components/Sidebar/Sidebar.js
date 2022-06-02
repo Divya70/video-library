@@ -31,7 +31,7 @@ const Sidebar = () => {
 
         <div className="sidebar-content">
           <Link to="/history" className="sidebar-item-link">
-            <i className="fa-solid fa-clock-rotate-left sidebar-icon"></i>{" "}
+            <i className="fa-solid fa-clock-rotate-left sidebar-icon"></i>
             History
           </Link>
         </div>

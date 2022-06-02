@@ -1,0 +1,31 @@
+.add-to-playlist-modal-main{
+      background-color:#323030;
+      width: 20%;
+      height: 7rem;
+      position:fixed;
+      top: 30%;
+      right: 40%;
+    
+   
+
+}
+.title-container-main{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      color: var(--secondary-color);
+      letter-spacing: 1px;
+      border-bottom:solid 3px white;
+      font-family: sans-serif;
+      margin-top: 0.6rem;
+}
+.watchlater-main{
+     padding: 1rem;
+     color: var(--secondary-color);
+}
+.create-playlist-cont{
+      margin-top: 1rem;
+}
+.add-icon{
+      margin-right: 1rem;
+}

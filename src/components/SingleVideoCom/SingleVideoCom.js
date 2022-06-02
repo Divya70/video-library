@@ -18,7 +18,6 @@ const SingleVideoCom = () => {
   const { state, dispatch } = useVideo();
   const [getsingleVideo, setGetSingleVideo] = useState();
   const { videoId } = useParams();
-  const { initialVideo } = state;
   const { likedVideo } = state;
   const { watchLaterVideo } = state;
   const {
@@ -61,9 +60,9 @@ const SingleVideoCom = () => {
                 onStart={() => callPostHistoryHandler()}
               />
             </div>
-            <div className="card-title">Title</div>
+            <div className="card-title">title</div>
             <div className="card-description">
-              <div className="views">112M views</div>
+              <div className="views">12M views</div>
               <div className="like-and-watchlater-cont">
                 {likedVideo.find((item) => item._id === videoId) ? (
                   <div
@@ -107,11 +106,11 @@ const SingleVideoCom = () => {
             <div className="channel-des">
               <div className="thumbnail-image">
                 <img
-                  src="https://yt3.ggpht.com/ytc/AKedOLTNtHgVmX114S4cnjoyFaDDJE6N1zNBwKgRNnYNAg=s176-c-k-c0x00ffffff-no-rj"
+                  src="https://yt3.ggpht.com/ytc/AKedOLRIAxfOELSmTu4aAHogiNagKGK-g7xlbE8zR_OT518=s176-c-k-c0x00ffffff-no-rj"
                   alt="thumbnail"
                 />
                 <div className="channel-details-cont">
-                  <div className="channel-name">Channel Name Ratan Tata</div>
+                  <div className="channel-name">Channel Name </div>
                   <p className="subscribers">512K Subscriber</p>
                 </div>
               </div>

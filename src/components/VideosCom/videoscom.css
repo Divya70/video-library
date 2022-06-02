@@ -1,7 +1,7 @@
 
   /* card */
   .card-container {
-      position: relative;
+        position:relative;
       width: 11.4rem;
       height: 16rem;
       border-radius: 0.2rem;
@@ -28,6 +28,9 @@
       background-color: #1e1d1d;
       border-radius: 5px;
       width: 1.6rem;
+}
+.fa-ellipsis-vertical{
+      font-size: 1.3rem;
 }
 .card-details{
 width: 14.4rem;

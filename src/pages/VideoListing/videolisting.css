@@ -1,13 +1,14 @@
-      body{
-      background-color: var( --black-color);
- } 
- .product-brand-container{
-       display: flex;
-       width: 100%;
-       margin-top:1.5rem;
- }
- .video-products-container{
-      width: 80%;
-      color: var(--secondary-color);
-      width: fit-content;
- }
+body {
+  background-color: var(--black-color);
+}
+.product-brand-container {
+  display: flex;
+  width: 100%;
+  margin-top: 1.5rem;
+  position: relative;
+}
+.video-products-container {
+  width: 80%;
+  color: var(--secondary-color);
+  width: fit-content;
+}
