@@ -1,0 +1,56 @@
+.create-playlist-modal-main{
+      background-color:#323030;
+      width: 20%;
+      height: auto;
+      position:fixed;
+      top: 30%;
+      right: 40%;
+      z-index: 2;
+}
+.title-container{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      color: var(--secondary-color);
+      letter-spacing: 1px;
+      border-bottom:solid 3px white;
+      font-family: sans-serif;
+      margin-top: 0.6rem;
+}
+.watchlater-main{
+     padding: 1rem;
+     color: var(--secondary-color);
+}
+.create-playlist-cont{
+      margin-top: 1rem;
+}
+.add-icon{
+      margin-right: 1rem;
+}
+
+.playlist-input{
+      border: none;
+      outline: none;
+      border-bottom: 2px solid var(--secondary-color);
+      background: none;
+      color: var(--secondary-color);
+      font-size: 0.8rem;
+      width: 13rem;
+}
+
+.create-playlist-button{
+      margin-top: 1rem;
+      cursor: pointer;
+      border: none;
+      padding: 0.2rem;
+      margin-left: 10rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+}
+.create-playlist-box{
+      display: flex;
+      flex-direction: column;
+}
+.input-data{
+      margin-right: 1rem;
+}

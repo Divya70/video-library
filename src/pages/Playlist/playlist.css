@@ -1,0 +1,13 @@
+.playlist-cont{
+      color: var(--secondary-color);
+      margin-left: 1rem;
+      margin-top: 1rem;
+      width: 80%;
+      height: auto;
+}
+.playlist-brand-container{
+      display: flex;
+      width: 100%;
+      margin-top: 1rem;
+    
+}

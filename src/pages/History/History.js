@@ -20,7 +20,6 @@ const History = () => {
       const getHistoryResponse = await axios.get("/api/user/history", {
         headers: { authorization: token },
       });
-      console.log("get Histry Res", getHistoryResponse);
       if (getHistoryResponse.status === 200) {
         dispatch({
           type: "GET_HISTORY",
@@ -80,43 +79,44 @@ const History = () => {
       <Navbar />
       <div className="history-card-brand-cont">
         <Sidebar />
-
         <div>
-          <h2 className="heading">History Videos</h2>
-          <button
-            className="clear-all-history-btn"
-            onClick={deleteAllHistoryHandler}
-          >
-            Clear All History
-          </button>
-        </div>
+          <div>
+            <h2 className="heading">History Videos</h2>
+            <button
+              className="clear-all-history-btn"
+              onClick={deleteAllHistoryHandler}
+            >
+              Clear All History
+            </button>
+          </div>
 
-        {historyVideo.map((item) => {
-          return (
-            <>
-              <div className="history-card-container" key={item._id}>
-                <div className="history-video-cont">
-                  <div
-                    className="history-image-cont"
-                    onClick={() => navigate(`/singlevideopage/${item._id}`)}
-                  >
-                    <img src={item.imgScr} />
-                  </div>
-                  <div>
-                    <div className="history-video-title">{item.title}</div>
-                    <p className="des">{item.description}</p>
-                  </div>
-                  <div className="delete-history-video">
-                    <i
-                      className="fa-solid fa-trash"
-                      onClick={() => deleteHistoryHandler(item._id)}
-                    ></i>
+          {historyVideo.map((item) => {
+            return (
+              <>
+                <div className="history-card-container" key={item._id}>
+                  <div className="history-video-cont">
+                    <div
+                      className="history-image-cont"
+                      onClick={() => navigate(`/singlevideopage/${item._id}`)}
+                    >
+                      <img src={item.imgScr} />
+                    </div>
+                    <div>
+                      <div className="history-video-title">{item.title}</div>
+                      <p className="des">{item.description}</p>
+                    </div>
+                    <div className="delete-history-video">
+                      <i
+                        className="fa-solid fa-trash"
+                        onClick={() => deleteHistoryHandler(item._id)}
+                      ></i>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </>
-          );
-        })}
+              </>
+            );
+          })}
+        </div>
       </div>
     </>
   );

@@ -12,7 +12,7 @@ const Home = () => {
       </div>
 
       <Navbar />
-      {authState.tokn === null ? (
+      {authState.token === null ? (
         alert("please Login")
       ) : (
         <Link to="/videolisting" className="explore-button-cont">

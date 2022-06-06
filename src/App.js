@@ -10,6 +10,8 @@ import { History } from "./pages/History/History";
 import Mockman from "mockman-js";
 import { SingleVideoPage } from "./pages/SingleVideoPage/SingleVideoPage";
 import { Logout } from "./pages/Logout/Logout";
+import { Playlist } from "./pages/Playlist/Playlist";
+import { SinglePlaylistPage } from "./pages/SinglePlaylistPage/SinglePlaylistPage";
 function App() {
   return (
     <div className="App">
@@ -21,6 +23,8 @@ function App() {
         <Route path="/videolisting" element={<VideoListing />} />
         <Route path="/liked" element={<Liked />} />
         <Route path="/watchlater" element={<WatchLater />} />
+        <Route path="/playlist" element={<Playlist />} />
+        <Route path="/playlist/:playlistId" element={<SinglePlaylistPage />} />
         <Route path="history" element={<History />} />
         <Route path="/singlevideopage/:videoId" element={<SingleVideoPage />} />
         <Route path="/mock" element={<Mockman />} />
